@@ -1,4 +1,5 @@
-/*estilo conectado
+/*estilo conectado*/
+/*
 .conectado{
     position: absolute;
     background-color: rgb(5, 5, 5);
@@ -209,11 +210,26 @@
 .desconectado{
     position: absolute;
     left:50vw;
-    padding-top: 25px;    
+    width: 50vw;  
+    background-color:transparent;  
 }
 .boxLink{
-    background-color: aliceblue;
-    width: 800px;
+    background-color:transparent;
+    width: 40vw;
+    padding-top: 50px;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+}
+.boxLink > .link{
+    color: #04523a;
+    text-decoration: none;
+    font-size:22px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.boxLink > .link:hover{
+    color: #ffffff;
 }
 
 .nav {
@@ -348,9 +364,12 @@ box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
         padding-top: 10vh;
         width: 150px;
     }
+    .boxLink{
+        padding-top:20px ;
     /*.navbar-toggler {
         font-size: 22px;
     }*/
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -360,6 +379,9 @@ box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
     }
     .sidebar {
         width: 150px;
+    }
+    .boxLink{
+        width: 48vw;
     }
     /*.navbar-toggler {
         font-size: 22px;

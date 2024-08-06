@@ -34,9 +34,7 @@ const NavBar = ({ statusNav }) => {
                 <Link className={styles.link} href="/contato">
                     Contato
                 </Link>
-                <Link className={styles.link} href="/prescricao/listaPrescricao">
-                    Add. Prescricao
-                </Link>
+            
             </div>
         </nav> : <>
             <nav className={styles.nav}>
