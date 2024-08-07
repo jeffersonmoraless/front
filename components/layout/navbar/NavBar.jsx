@@ -22,7 +22,7 @@ const NavBar = ({ statusNav }) => {
     <>{statusNav === 'desconectado'?
         <nav className={`${styles[statusNav]}`}>
             <div className={styles.boxLink}>
-                <Link className={styles.link} href="/home">
+                <Link className={styles.link} href="/">
                     Home
                 </Link>
                 <Link className={styles.link} href="/sobre">

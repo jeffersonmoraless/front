@@ -23,13 +23,14 @@ export default function Home() {
         return alert("senha obrigatorio");
     } 
     try {
-        const {data} = await Axios.post('http://localhost:5008/funcionario/login',dados) 
-       /*setTokenUser(data, navigate)*/
-        console.log(data)
-        Cookies.set('token', 'fake-token', { expires: 1 }); // Expira em 1 dia
+        /*const {data} = await Axios.post('http://localhost:5008/funcionario/login',dados) 
+       /*setTokenUser(data, navigate)*//*
+        console.log(data)*/
+        Cookies.set('testToken','sdajmlkasjdkjasdlkasdllsadkjas'); // Expira em 1 dia
+        //Cookies.remove('testToken)'
         router.push('/prescricao/listaPrescricao');
     } catch (error) {
-      console.log(error.response.data)
+     /* console.log(error.response.data)*/
     } 
   }
   return (

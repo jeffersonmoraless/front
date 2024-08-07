@@ -1,8 +1,7 @@
 import { NextResponse } from 'next/server';
 
 export function middleware(request) {
-  const token = request.cookies.get('token');
-  
+  const token = request.cookies.get('testToken');
   if (!token) {
     return NextResponse.redirect(new URL('/', request.url));
   }
@@ -12,7 +11,7 @@ export function middleware(request) {
 
 export const config = {
   matcher: [
-    '/prescricao/:path*',
+    '/cadastro',
     '/mais-uma-rota-protegida/:path*',
   ],
 };
