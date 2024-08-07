@@ -215,7 +215,7 @@
 }
 .boxLink{
     background-color:transparent;
-    width: 40vw;
+    width: 30vw;
     padding-top: 50px;
     margin:auto;
     display: flex;
@@ -354,7 +354,7 @@ box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
     margin: auto;
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 672px) {
     .sidebar .a,
     .sidebar .sub .a {
         font-size: 14px;
