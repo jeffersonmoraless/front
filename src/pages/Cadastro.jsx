@@ -9,8 +9,14 @@ import { useState } from 'react';
 import Axios from "axios";
 import { useRouter } from "next/router";
 
+
 const cadastro = () => {
-    const router = useRouter();
+   // const router = useRouter(); // Certifique-se de chamar o hook useRouter corretamente
+    //const { pathname } = router;
+
+
+
+    
     const [isselected,setIsselected] = useState('medico');
     const {uf} = UseEstados();
     const mudancaRadio =(e)=>{

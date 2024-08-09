@@ -1,0 +1,81 @@
+
+.receita{
+    width: 300px;
+    height: 355px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    border: solid 1px #034632;
+    box-shadow: 4px 1px 10px 2px #03463238;
+    position: relative;
+}
+.receituario{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    text-align: center;
+    border-bottom: 1px black solid;
+    /*boder:solid 2px black;*/
+    margin: 7px;
+    padding: 7px;
+}
+.dPessoais{
+    margin-left: 7px;
+    margin-right: 7px;
+    border-bottom: 1px black solid;
+    font-size: 11px;
+}
+.dPessoais h4{
+    text-align: center;
+    font-size: 14px;
+}
+.prescricao{
+    margin-left: 7px;
+    margin-right: 7px;
+    font-size: 11px;
+}
+.prescricao h4{
+    text-align: center;
+    font-size: 14px;
+}
+
+.medQtd{
+    display: flex;
+    justify-content: space-between;
+}
+.subSection{
+    margin-top: 7px;
+    border-bottom: 1px rgba(0, 0, 0, 0.075) solid;
+
+}
+.dataCity{
+    display: flex;
+    justify-content: end;
+    margin: 10% 0 10% 0;
+}
+
+.assinatura{  position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    margin: auto;
+    border-top: 1px black solid;
+    text-align: center;
+}
+.btn{
+    background-color: rgba(3, 122, 53, 0.315);
+    border-radius: 4px;
+    padding:2px 5px 2px 5px;
+    border:1px rgba(3, 122, 53, 0.486) solid;
+    margin-bottom: 7px;;
+}
+.p{
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+
+
+/* src/components/Card.module.css */
+    /*font-family: "Roboto", sans-serif;
+  */
+ 

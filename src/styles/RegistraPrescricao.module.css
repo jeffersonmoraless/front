@@ -1,0 +1,58 @@
+.boxRegistra{
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        width:100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 20;
+}
+      
+.receita {
+        position: absolute;
+        background: #d3f7e6;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 60%;
+        width: 100%;
+        z-index: 20;
+}
+.titulo {
+    
+    text-align: center;
+}
+.formSelect{
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.testandoEstilo {
+    width: 50%;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.testandoEstilo .MuiOutlinedInput-root {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.testandoEstilo .MuiOutlinedInput-input {
+    font-size: 16px;
+}
+
+.testandoEstilo .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+    padding: 0;
+}
+
+.customAutocomplete .MuiOutlinedInput-root {
+    background-color: #c91e1e; /* Substitua pela cor desejada */
+    border-radius: 5px;
+}

@@ -9,10 +9,11 @@ const useAuth = () => {
   useEffect(() => {
     const token = Cookies.get('token');
     if (token) {
-        setAuthenticated('conectado');
+        setStatusAuth('conectado');
     } else {
-        setAuthenticated('desconectado'); 
+        setStatusAuth('desconectado'); 
         router.push('/');
+        
     }
   }, [router]);
 

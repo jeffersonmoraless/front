@@ -53,7 +53,7 @@ const NavBar = ({ statusNav }) => {
                 </button>
                     </li>
                     <li className={styles.li}>
-                        <Link className={styles.a} href="/home">home</Link>
+                        <Link className={styles.a} href="/">home</Link>
                     </li>
                     <li className={styles.li}>
                         <Link className={styles.a} href="/prescricao" onClick={(e) => { e.preventDefault(); toggleSubMenu('prescricao'); }}>

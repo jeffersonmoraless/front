@@ -207,6 +207,7 @@
 }*/
 /**********************************************************************************************************/
 /* components/SidebarMenu.module.css */
+
 .desconectado{
     position: absolute;
     left:50vw;
@@ -260,7 +261,7 @@ box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
     top: 0;
     min-height: 100vh;
     left: -250px;
-    /* overflow-x: hidden;*/
+    overflow-x: hidden;
     z-index: 1;
     background-color: #125a43;
     transition: all 0.5s;
