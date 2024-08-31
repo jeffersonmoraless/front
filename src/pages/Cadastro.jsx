@@ -10,7 +10,7 @@ import Axios from "axios";
 import { useRouter } from "next/router";
 
 
-const cadastro = () => {
+const Cadastro = () => {
    // const router = useRouter(); // Certifique-se de chamar o hook useRouter corretamente
     //const { pathname } = router;
 
@@ -129,4 +129,4 @@ const cadastro = () => {
     );
 }
 
-export default cadastro;
+export default Cadastro;

@@ -6,9 +6,8 @@ import Card from "../../../components/layout/card/Card";
 import Image from "next/image";
 import imageAdicao from "../../../public/image/adicao.png";
 import Link from "next/link";
-import { useState } from "react";
+import { useState,useEffect,useRef } from "react";
 import Axios from "axios";
-import { useEffect } from "react";
 import { io, Socket } from "socket.io-client";
 import RegistraPrescricao from "../../../components/layout/registra/registraPrescricao";
 const ListaPrescricao = () => {
@@ -17,7 +16,7 @@ const ListaPrescricao = () => {
   const [prescricoes, setPrescricoes] = useState([]);
   const [selectedPrescricao, setSelectedPrescricao] = useState(null);
   const [componentRegitra, setComponentRegitra] = useState(false);
-  let socket;
+  const socketRef = useRef(null);
   const fetchPrescricao = () => {
     Axios.get("http://localhost:5008/homepage/lista/prescricao")
       .then((response) => {
@@ -36,15 +35,15 @@ const ListaPrescricao = () => {
   };
   useEffect(() => {
     fetchPrescricao();
-    socket = io("http://localhost:5008");
+    socketRef.current = io("http://localhost:5008");
 
     // Ouvir por mensagens do servidor
-    socket.on("message", (msg) => {
+    socketRef.current.on("message", (msg) => {
       console.log(msg.name);
       setMessage(msg);
     });
     return () => {
-      socket.off("message");
+      socketRef.current.off("message");
     };
   }, []);
 
