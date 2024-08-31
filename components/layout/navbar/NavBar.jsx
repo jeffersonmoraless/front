@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import styles from "../../../src/styles/NavBar.module.css";
 import setaMenu from "../../../public/angle-right.svg"
+
 import avatar from "../../../public/avatar.png"
 import Image from "next/image";
 
@@ -47,7 +48,8 @@ const NavBar = ({ statusNav }) => {
             <div className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
                 <ul className={styles.ulP}>
                 <li className={styles.liIcone}>
-                <img className={`${styles.avatar}`} src="/avatar.png" alt="" />
+                
+                <Image className={styles.avatar} src={avatar} alt=""/>
                 <button className={styles.btn} onClick={toggleSidebar}>
                     <p className={styles.iconFecha}>{sidebarOpen &&'×'}</p>
                 </button>
@@ -56,8 +58,8 @@ const NavBar = ({ statusNav }) => {
                         <Link className={styles.a} href="/">home</Link>
                     </li>
                     <li className={styles.li}>
-                        <Link className={styles.a} href="/prescricao" onClick={(e) => { e.preventDefault(); toggleSubMenu('prescricao'); }}>
-                            Prescrição <img className={`${styles.arrow} ${subMenuOpen.prescricao ? styles.rotate : ''}`} src="/angle-right.svg" alt="" />
+                        <Link className={styles.a} href="/prescricao" onClick={(e) => { e.preventDefault(); toggleSubMenu('prescricao'); }}>   
+                            Prescrição <Image className={`${styles.arrow} ${subMenuOpen.prescricao ? styles.rotate : ''}`} src={setaMenu} alt="" />
                         </Link>
                         <div className={`${styles.subMenu} ${subMenuOpen.prescricao ? styles.show : ''}`}>
                             <ul className={styles.subPrescricao}>
@@ -73,7 +75,7 @@ const NavBar = ({ statusNav }) => {
                     </li>
                     <li className={styles.li}>
                         <Link className={styles.a} href="/vantagens" onClick={(e) => { e.preventDefault(); toggleSubMenu('vantagens'); }}>
-                            Vantagens <img className={`${styles.arrow} ${subMenuOpen.vantagens ? styles.rotate : ''}`} src="/angle-right.svg" alt="" />
+                            Vantagens <Image className={`${styles.arrow} ${subMenuOpen.vantagens ? styles.rotate : ''}`} src={setaMenu} alt="" />
                         </Link>
                         <div className={`${styles.subMenu} ${subMenuOpen.vantagens ? styles.show : ''}`}>
                             <ul className={styles.subVantagens}>
