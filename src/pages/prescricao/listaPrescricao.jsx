@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useState,useEffect,useRef } from "react";
 import Axios from "axios";
 import { io, Socket } from "socket.io-client";
-import RegistraPrescricao from "../../../components/layout/registra/registraPrescricao";
+import RegistraPrescricao from "../../../components/layout/registra/RegistraPrescricao";
 const ListaPrescricao = () => {
   const router = useRouter();
   const [message, setMessage] = useState("");
