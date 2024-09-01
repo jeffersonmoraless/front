@@ -34,7 +34,7 @@ const ConteudoPrincipal = ({ children }) => {
         if(router.asPath==='/' || router.asPath.includes('/sobre') 
             || router.asPath.includes('/vantagens') 
             || router.asPath.includes('/contato') 
-            || router.asPath.includes('/cadastro') 
+            || router.asPath.includes('/Cadastro') 
             || router.asPath.includes('/recuperaSenha')
         ){
             setEstado('desconectado')

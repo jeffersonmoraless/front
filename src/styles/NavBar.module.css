@@ -332,6 +332,7 @@ box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
 .arrow {
     margin-left: auto;
     width: 7px;
+    height: 7px;
     transition: transform 0.4s;
 }
 
@@ -352,6 +353,7 @@ box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
 }
 .avatar{
     width:100px;
+    height: 100px;
     margin: auto;
 }
 
