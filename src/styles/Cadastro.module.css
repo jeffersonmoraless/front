@@ -1,7 +1,6 @@
 .boxCadastro{
     background-color: #0c5742b6;
-    min-width: 40%;
-    min-height: 30%;
+    min-width: 50vw;
     display: flex;
     align-items: center;
     justify-content: center;

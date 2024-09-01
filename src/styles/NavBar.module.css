@@ -212,7 +212,7 @@
     position: absolute;
     left:50vw;
     width: 50vw;  
-    background-color:transparent;  
+      
 }
 .boxLink{
     background-color:transparent;
@@ -221,6 +221,7 @@
     margin:auto;
     display: flex;
     justify-content: space-between;
+    
 }
 .boxLink > .link{
     color: #04523a;
@@ -389,6 +390,16 @@ box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
     /*.navbar-toggler {
         font-size: 22px;
     }*/
+}
+
+@media screen and (max-width: 800px) {
+    .desconectado{
+        left: 0;
+        width: 100%;
+    }
+    .boxLink{
+        width: 80vw;
+    }
 }
 
 
