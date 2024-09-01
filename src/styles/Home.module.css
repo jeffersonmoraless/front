@@ -14,7 +14,9 @@
     
     width: 90%;
     height:90%;
-    text-shadow: black 1px 1px;    
+    text-shadow: black 1px 1px;   
+    
+    
     
     
 }
@@ -22,6 +24,7 @@
 .boxForm > h1{
     color:#fff;
     text-align: center;
+    font-size: 20px;
     
 }
 
@@ -65,3 +68,13 @@
 .p > .link:hover{
     color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+    
+    
+}
+
+@media screen and (max-height: 672px) {
+    
+}
+
