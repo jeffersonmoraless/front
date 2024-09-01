@@ -48,7 +48,7 @@ export default function Home() {
                   <Link href='/esquecisenha' className={styles.link}> esqueceu a senha?</Link>
               </div>
               <Button type='submit' text='enviar'/>
-              <p className={styles.p}>Ainda não possui uma conta? <Link href='/cadastro' className={styles.link}>Cadastre-se</Link></p>
+              <p className={styles.p}>Ainda não possui uma conta? <Link href='/Cadastro' className={styles.link}>Cadastre-se</Link></p>
             </form>
         </div>
         
