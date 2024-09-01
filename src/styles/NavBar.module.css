@@ -226,7 +226,7 @@
 .boxLink > .link{
     color: #04523a;
     text-decoration: none;
-    font-size:22px;
+    font-size:20px;
     font-weight: 600;
     transition: 0.5s;
 }
@@ -258,7 +258,6 @@ box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
 .sidebar {
     position: fixed;
     width: 250px;
-    
     top: 0;
     min-height: 100vh;
     left: -250px;
@@ -398,7 +397,7 @@ box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
         width: 100%;
     }
     .boxLink{
-        width: 80vw;
+        width: 95vw;
     }
 }
 

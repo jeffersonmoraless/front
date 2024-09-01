@@ -1,7 +1,7 @@
 .boxLogin{
-   
+    
     background-color: #0c5742b6;
-    width: 50vw;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,12 +68,13 @@
     color: #fff;
 }
 
-@media screen and (max-width: 768px) {
-
-    
+@media screen and (max-width: 800px) {
+    .boxLogin{
+        width: 90%;
+    }
 }
-
+/*
 @media screen and (max-height: 672px) {
     
 }
-
+*/
