@@ -20,7 +20,9 @@
     color: #fff;
     font-size: 14px;
     background-color: transparent;
+    /*background-color: green;*/
     border:2px solid rgba(255, 255, 255, 0.2);
+    /*background-color: #348478;*/
 }
 
 .BoxInputs > input::placeholder{
@@ -66,5 +68,17 @@
     color: rgba(0, 0, 0, 0.315);
     text-shadow:none;
 }
-
-
+.BoxInputs > input:hover{
+    border:2px solid #0c5742b6;
+}
+.BoxInputs > input:focus{
+    border:2px solid #0c5742b6;
+}
+.BoxInputs > input:-webkit-autofill {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: white !important; 
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 5000s ease-in-out 0s; 
+}

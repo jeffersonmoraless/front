@@ -1,6 +1,6 @@
 .boxCadastro{
     background-color: #0c5742b6;
-    min-width: 50vw;
+    min-width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,6 +9,8 @@
     border:2px solid rgba(255, 255, 255, 0.2);
 }
 .titulo {
+    
+    width: 90%;
     padding: 15px 0;
 }
 .titulo > h1{
@@ -26,7 +28,6 @@
     font-weight: 600;
 }
 .crmCrf{
-
     display: flex;
     justify-content: space-between;
     align-items: center;
