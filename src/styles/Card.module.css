@@ -10,22 +10,27 @@
 }
 .receituario{
     font-family: "Roboto", sans-serif;
-    font-weight: 900;
     text-align: center;
     border-bottom: 1px black solid;
-    /*boder:solid 2px black;*/
     margin: 7px;
-    padding: 7px;
+    padding: 7px;    
 }
+.receituario h3{
+    font-size: 14px;
+    font-weight: 600;
+}
+
 .dPessoais{
     margin-left: 7px;
     margin-right: 7px;
     border-bottom: 1px black solid;
     font-size: 11px;
+    
 }
 .dPessoais h4{
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 600;
 }
 .prescricao{
     margin-left: 7px;
@@ -34,13 +39,17 @@
 }
 .prescricao h4{
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .medQtd{
     display: flex;
     justify-content: space-between;
+    
+    margin-bottom: px;
 }
+
 .subSection{
     margin-top: 7px;
     border-bottom: 1px rgba(0, 0, 0, 0.075) solid;
@@ -59,6 +68,8 @@
     margin: auto;
     border-top: 1px black solid;
     text-align: center;
+    background-color: red;
+    display: none;
 }
 .btn{
     background-color: rgba(3, 122, 53, 0.315);

@@ -27,14 +27,14 @@ const Card = ({ prescricao }) => {
         <section className={styles.dPessoais}>
           <h4>Dados Pessoais</h4>
           <p>
-            <span>Paciente:</span> {paciente_nome}
-          </p>
-          <p>
-            <span>Data Nascimento:</span> 27/04/1989{" "}
-            
-          </p>
-          <p>
-            <span>Convênio:</span> 000.000.000-00{" "}
+            <span><strong>Paciente:</strong></span>
+            {paciente_nome}<br/>
+          
+            <span><strong>Data Nascimento:</strong></span>
+            {" "}<br /> 
+          
+            <span><strong>Convênio:</strong></span>
+            {" "}
           </p>
         </section>
         <section className={styles.prescricao}>
@@ -44,16 +44,16 @@ const Card = ({ prescricao }) => {
               index <= 1 && (
                 <div key={index} className={styles.subSection}>
                   <div className={styles.medQtd}>
-                    <p>
-                      <span>Medicamento:</span> {med.nome}
-                    </p>
-                    <p>
-                      <span>Quantidade:</span> {med.quantidade}
-                    </p>
+                    
+                      <span><strong>Medicamento:</strong> {med.nome}</span>
+                    
+                    
+                      <span><strong>Quantidade:</strong> {med.quantidade}</span>
+                    
                   </div>
-                  <p>
-                    <span>Formas De Usar:</span> {med.forma_uso}
-                  </p>
+                  
+                    <span><strong>Formas De Usar:</strong></span> {med.forma_uso}
+                  
                 </div>
               )
           )}
