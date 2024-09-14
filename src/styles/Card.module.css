@@ -1,6 +1,8 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 .receita{
-    width: 300px;
+    width: 268px;
     height: 355px;
     background-color: rgb(255, 255, 255);
     border-radius: 7px;
@@ -18,6 +20,9 @@
 .receituario h3{
     font-size: 14px;
     font-weight: 600;
+}
+.responses{
+    font-family: "Space Mono", monospace;
 }
 
 .dPessoais{
@@ -58,35 +63,46 @@
 .dataCity{
     display: flex;
     justify-content: end;
-    margin: 10% 0 10% 0;
+    margin-bottom: 30px;
+    font-family: "Space Mono", monospace;
 }
-
-.assinatura{  position: absolute;
-    bottom: 0;
-    left: 25%;
+.assinatura{  
     width: 50%;
     margin: auto;
     border-top: 1px black solid;
-    text-align: center;
-    background-color: red;
-    display: none;
+    text-align: center; 
 }
-.btn{
+.nomeMedico{
+    font-family: "Space Mono", monospace;
+    font-weight:700;
+    font-style: normal;
+}
+.btn
+{
     background-color: rgba(3, 122, 53, 0.315);
     border-radius: 4px;
     padding:2px 5px 2px 5px;
     border:1px rgba(3, 122, 53, 0.486) solid;
-    margin-bottom: 7px;;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    transition: 0.3s;
+}
+.btn:hover{
+    background-color:#245e3d ;
+    color: white;
+    cursor: pointer;
 }
 .p{
   text-align: center;
   font-weight: 700;
   font-size: 20px;
+  margin-bottom: 0px;
+
+}
+.espaco{
+    height: 30px;
 }
 
 
 
-/* src/components/Card.module.css */
-    /*font-family: "Roboto", sans-serif;
-  */
  

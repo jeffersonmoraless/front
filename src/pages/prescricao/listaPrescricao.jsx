@@ -50,21 +50,22 @@ const ListaPrescricao = () => {
   return (
     <Container>
       <div className={styles.lista}>
-        <h1>Prescrições</h1>
+        
         <div className={styles.gridContainer}>
           <div className={styles.receita}>
-            <h4>Nova Prescrição</h4>
+            
 
             <Image
               onClick={abreNovaPrescricao}
               className={styles.image}
+              title="Click para adicionar uma nova prescrição"
               src={imageAdicao}
               alt="Adicionar"
             />
             {componentRegitra && <RegistraPrescricao />}
           </div>
           {prescricoes.map((prescricao) => (
-            <Card key={prescricao.prescricao_id} prescricao={prescricao} />
+            <Card key={prescricao.prescricao_id} id={prescricao.prescricao_id} prescricao={prescricao} />
           ))}
         </div>
       </div>

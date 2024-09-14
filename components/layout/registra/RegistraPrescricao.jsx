@@ -105,14 +105,15 @@ const RegistraPrescricao = () => {
 
   return (
     <div className={styles.boxRegistra}>
-      <div className={`${styles.receita} mt-5`}>
+      <div className={styles.modalContent}>
+      <div className={styles.receita}>
         {showModal && (
           <ModalPaciente
             onClose={closeModal}
             refreshPacientes={fetchPacientes}
           />
         )}
-        <h4 className={styles.titulo}>Receituário</h4>
+        <h4 className={styles.titulo}>Prescrever</h4>
         <form onSubmit={registraReceita}>
           <select
             className={styles.formSelect}
@@ -129,93 +130,114 @@ const RegistraPrescricao = () => {
               + Adicionar Novo Paciente
             </option>
           </select>
-          <h4 className={styles.titulo}>Medicamentos</h4>
+          
+          <h4 className={styles.subTitulo}>Medicamentos</h4>
+            <div>
 
-          {medicamentos.map((medicamento, index) => (
-            <>
-              <div key={index} className={`mb-3 customiza`}>
-                <div className={`med row`}>
-                  <div className={"col-md-8"}>
-                    <label
-                      htmlFor={`medicamento-${index}`}
-                      className={styles.formLabel}
+            
+                {medicamentos.map((medicamento, index) => (
+                  <>
+                    <div key={index} /*className={`mb-3 customiza`}*/>
+                      <div /*className={`med row`}*/>
+                        <div /*className={"col-md-8"}*/>
+                          <label
+                            htmlFor={`medicamento-${index}`}
+                            /*className={styles.formLabel}*/
+                          >
+                            Medicamento
+                          </label>
+                          <Autocomplete
+                            className={styles.testandoEstilo}
+                            sx={{
+                              bgcolor: 'red',
+                              boxShadow: 0,
+                              borderRadius: 1,
+                              p:0,
+                              minWidth: 300,
+                              height:'25px'
+                            }}
+                            freeSolo
+                            id={`autocomplete-medicamento-${index}`}
+                            options={listaMedicamentos.map((med) => med.nome)}
+                            value={medicamento.nome}
+                            onChange={(event, newValue) => {
+                              handleInputChange(index, "medicamento", newValue);
+                            }}
+                            onInputChange={(event, newValue) => {
+                              handleInputChange(index, "medicamento", newValue);
+                            }}
+                            renderInput={(params) => (
+                              <TextField
+                                {...params}
+                                variant="outlined"
+                                placeholder="Digite o nome do medicamento"
+                                InputLabelProps={{ shrink: false }}
+                                //className={styles.testandoEstilo}
+                                sx={{
+                                  bgcolor: 'red',
+                                  boxShadow: 0,
+                                  borderRadius: 1,
+                                  p:0,
+                                  minWidth: 300,
+                                  height:'25px'
+                                }}
+
+                                  
+                              />
+                            )}
+                          />
+                        </div>
+                        <div /*className={`col-md-4`}*/>
+                          <label
+                            htmlsFor={`quantidade-${index}`}
+                            className={styles.formLabel}
+                          >
+                            Quantidade
+                          </label>
+                          <input
+                            type="number"
+                            /*className={styles.formControl}*/
+                            name={`quantidade-${index}`}
+                            placeholder="Quantidade"
+                            min={1}
+                            value={medicamento.quantidade}
+                            onChange={(e) =>
+                              handleInputChange(index, "quantidade", e.target.value)
+                            }
+                          />
+                        </div>
+                      </div>
+
+                      <label
+                        htmlsFor={`uso-${index}`}
+                        className={styles.formLabel}
+                      >{`Formas de Usar`}</label>
+                      <input
+                        type="text"
+                        className={styles.formControl}
+                        name={`usar-${index}`}
+                        placeholder="Formas de usar"
+                        value={medicamento.uso}
+                        onChange={(e) =>
+                          handleInputChange(index, "uso", e.target.value)
+                        }
+                      />
+                    </div>
+
+                    <div
+                      className={"d-flex justify-content-center align-items-center"}
                     >
-                      Medicamento
-                    </label>
-                    <Autocomplete
-                      className={styles.testandoEstilo}
-                      freeSolo
-                      id={`autocomplete-medicamento-${index}`}
-                      options={listaMedicamentos.map((med) => med.nome)}
-                      value={medicamento.nome}
-                      onChange={(event, newValue) => {
-                        handleInputChange(index, "medicamento", newValue);
-                      }}
-                      onInputChange={(event, newValue) => {
-                        handleInputChange(index, "medicamento", newValue);
-                      }}
-                      renderInput={(params) => (
-                        <TextField
-                          {...params}
-                          variant="outlined"
-                          placeholder="Digite o nome do medicamento"
-                          InputLabelProps={{ shrink: false }}
-                          className={styles.testandoEstilo}
-                        />
-                      )}
-                    />
-                  </div>
-                  <div className={`col-md-4`}>
-                    <label
-                      htmlsFor={`quantidade-${index}`}
-                      className={styles.formLabel}
-                    >
-                      Quantidade
-                    </label>
-                    <input
-                      type="number"
-                      className={styles.formControl}
-                      name={`quantidade-${index}`}
-                      placeholder="Quantidade"
-                      min={1}
-                      value={medicamento.quantidade}
-                      onChange={(e) =>
-                        handleInputChange(index, "quantidade", e.target.value)
-                      }
-                    />
-                  </div>
-                </div>
-
-                <label
-                  htmlsFor={`uso-${index}`}
-                  className={styles.formLabel}
-                >{`Formas de Usar`}</label>
-                <input
-                  type="text"
-                  className={styles.formControl}
-                  name={`usar-${index}`}
-                  placeholder="Formas de usar"
-                  value={medicamento.uso}
-                  onChange={(e) =>
-                    handleInputChange(index, "uso", e.target.value)
-                  }
-                />
-              </div>
-
-              <div
-                className={"d-flex justify-content-center align-items-center"}
-              >
-                <button
-                  className={"btn btn-outline-success"}
-                  type="button"
-                  onClick={() => removerCampos(index)}
-                >
-                  - Medicamento
-                </button>
-              </div>
-            </>
-          ))}
-
+                      <button
+                        className={"btn btn-outline-success"}
+                        type="button"
+                        onClick={() => removerCampos(index)}
+                      >
+                        - Medicamento
+                      </button>
+                    </div>
+                  </>
+                ))}
+          </div>
           <div className={`med-row`}>
             <button
               className={"btn btn-success col-md-6 mt-3"}
@@ -229,6 +251,7 @@ const RegistraPrescricao = () => {
             </button>
           </div>
         </form>
+      </div>
       </div>
     </div>
   );
